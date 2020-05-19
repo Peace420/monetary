@@ -1,4 +1,4 @@
-package rrd;
+package org.rrd.user;
 
 import org.apache.catalina.User;
 import org.mybatis.spring.annotation.MapperScan;
