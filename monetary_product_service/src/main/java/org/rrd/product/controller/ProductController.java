@@ -27,7 +27,7 @@ public class ProductController {
     private ProductService productService;
 
     /**
-     * description: 利率计算器
+     * description: 利率计算器 17.25
      * version: 1.0
      * date: 2020/5/22 12:19
      * author: 朱忠涛
