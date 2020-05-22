@@ -14,4 +14,6 @@ import java.util.List;
 @Mapper
 public interface ProductMapper {
     List<Product> uplan();
+
+    List<Product> allProduct();
 }

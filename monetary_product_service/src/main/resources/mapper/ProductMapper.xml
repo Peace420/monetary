@@ -6,7 +6,11 @@
 <mapper namespace="org.rrd.product.mapper.ProductMapper">
     <select id="uplan" resultType="product">
         SELECT
-        service_deadline servicedeadline,rate
+        service_deadline,rate
+        FROM t_product
+    </select>
+    <select id="allProduct" resultType="product">
+        SELECT *
         FROM t_product
     </select>
 </mapper>

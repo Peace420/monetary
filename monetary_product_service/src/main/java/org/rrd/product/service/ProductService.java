@@ -33,10 +33,19 @@ public class ProductService {
         Map<Integer, Double> returnMap = new HashMap<>();
         List<Product> list  = productMapper.uplan();
         for (Product product : list) {
-            Integer month = Integer.valueOf(product.getServicedeadline());
+            Integer month = Integer.valueOf(product.getService_deadline());
             BigDecimal bigDecimal = new BigDecimal((number * product.getRate() * month / 12));
             returnMap.put(month,bigDecimal.setScale(2,BigDecimal.ROUND_HALF_UP).doubleValue());
         }
         return returnMap;
+    }
+
+    public List<Product> allProduct() {
+        List<Product> productList = productMapper.allProduct();
+        for (Product product : productList) {
+            double rate = new BigDecimal(product.getRate()*100).setScale(2, BigDecimal.ROUND_HALF_UP).doubleValue();
+            product.setRate(rate);
+        }
+        return productList;
     }
 }

@@ -16,38 +16,38 @@ import java.io.Serializable;
 
 public class Result implements Serializable{
 
-    private int number;
+    private int code;
     private String message;
-    private Object date;
+    private Object data;
 
-    public static Result success(Object date){
-        return new Result(Code.SUCCESS,date);
+    public static Result success(Object data){
+        return new Result(Code.SUCCESS,data);
     }
 
     public static Result error(){
         return new Result(Code.ERROR);
     }
 
-    private Result() {
+    public Result() {
     }
 
-    private Result(Code code) {
-        this.number = code.getNumber();
+    public Result(Code code) {
+        this.code = code.getNumber();
         this.message = code.getMessage();
     }
 
-    private Result(Code code, Object date) {
-        this.number = code.getNumber();
+    public Result(Code code,Object data) {
+        this.code = code.getNumber();
         this.message = code.getMessage();
-        this.date = date;
+        this.data=data;
     }
 
-    public int getNumber() {
-        return number;
+    public int getCode() {
+        return code;
     }
 
-    public void setNumber(int number) {
-        this.number = number;
+    public void setCode(int code) {
+        this.code = code;
     }
 
     public String getMessage() {
@@ -58,11 +58,13 @@ public class Result implements Serializable{
         this.message = message;
     }
 
-    public Object getDate() {
-        return date;
+    public Object getData() {
+        return data;
     }
 
-    public void setDate(Object date) {
-        this.date = date;
+    public void setData(Object data) {
+        this.data = data;
     }
+
+
 }

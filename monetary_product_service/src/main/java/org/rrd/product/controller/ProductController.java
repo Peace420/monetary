@@ -1,7 +1,9 @@
 package org.rrd.product.controller;
 
+import com.sun.org.apache.regexp.internal.RE;
 import org.apache.ibatis.annotations.Param;
 import org.rrd.product.service.ProductService;
+import org.rrd.system.pojo.Product;
 import org.rrd.system.result.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -33,11 +35,17 @@ public class ProductController {
      * @Param: [number]
      * @return: org.rrd.system.result.Result
      */
-    @RequestMapping(value = "/uplan",method = RequestMethod.POST)
-    public Result uplan(@RequestParam("number")int number){
+    @RequestMapping(value = "/calculator",method = RequestMethod.POST)
+    public Result calculator(@RequestParam("number")int number){
         if (number<1000 || number%1000!=0)
             return Result.error();
         Map map = productService.uplan(number);
         return Result.success(map);
+    }
+
+    @RequestMapping(value = "/allProduct",method = RequestMethod.GET)
+    public Result allProduct(){
+        List<Product> productList = productService.allProduct();
+        return Result.success(productList);
     }
 }

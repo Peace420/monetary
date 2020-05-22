@@ -30,11 +30,6 @@ public class Code implements Serializable{
     public Code() {
     }
 
-    private Code(int number, String message) {
-        this.number = number;
-        this.message = message;
-    }
-
     public int getNumber() {
         return number;
     }
@@ -55,5 +50,12 @@ public class Code implements Serializable{
         return SUCCESS;
     }
 
+    public static Code getERROR() {
+        return ERROR;
+    }
 
+    public Code(int number, String message) {
+        this.number = number;
+        this.message = message;
+    }
 }

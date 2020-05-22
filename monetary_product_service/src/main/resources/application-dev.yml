@@ -24,4 +24,5 @@ logging:
   level:
     org:
       rrd:
-        mapper: debug
+        product:
+          mapper: debug

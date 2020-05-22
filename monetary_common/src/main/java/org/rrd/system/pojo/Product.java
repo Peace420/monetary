@@ -19,128 +19,128 @@ import java.io.Serializable;
 public class Product implements Serializable{
 
     /*产品ID*/
-    private String productid;
+    private String product_id;
 
     /*x个月服务期限*/
-    private String servicedeadline;
+    private String service_deadline;
 
     /*利率ID*/
-    private String reateid;
+    private String reate_id;
 
     /*产品状态*/
-    private boolean productstatus;
+    private boolean product_status;
 
     /*上限人数*/
-    private int uppernum;
+    private int upper_num;
 
     /*利率*/
-    private double rate;
+    private Double rate;
 
     /*可出借金额*/
-    private int borrowbalance;
+    private int borrow_balance;
 
     /*剩余金额*/
-    private int surplusbalance;
+    private int surplus_balance;
 
     /*授权出借上限金额*/
-    private int upperbalance;
+    private int upper_balance;
 
     /*加入人次*/
-    private int joinnum;
+    private int join_num;
 
     public Product() {
     }
 
-    public String getProductid() {
-        return productid;
+    public String getProduct_id() {
+        return product_id;
     }
 
-    public void setProductid(String productid) {
-        this.productid = productid;
+    public void setProduct_id(String product_id) {
+        this.product_id = product_id;
     }
 
-    public String getServicedeadline() {
-        return servicedeadline;
+    public String getService_deadline() {
+        return service_deadline;
     }
 
-    public void setServicedeadline(String servicedeadline) {
-        this.servicedeadline = servicedeadline;
+    public void setService_deadline(String service_deadline) {
+        this.service_deadline = service_deadline;
     }
 
-    public String getReateid() {
-        return reateid;
+    public String getReate_id() {
+        return reate_id;
     }
 
-    public void setReateid(String reateid) {
-        this.reateid = reateid;
+    public void setReate_id(String reate_id) {
+        this.reate_id = reate_id;
     }
 
-    public boolean isProductstatus() {
-        return productstatus;
+    public boolean isProduct_status() {
+        return product_status;
     }
 
-    public void setProductstatus(boolean productstatus) {
-        this.productstatus = productstatus;
+    public void setProduct_status(boolean product_status) {
+        this.product_status = product_status;
     }
 
-    public int getUppernum() {
-        return uppernum;
+    public int getUpper_num() {
+        return upper_num;
     }
 
-    public void setUppernum(int uppernum) {
-        this.uppernum = uppernum;
+    public void setUpper_num(int upper_num) {
+        this.upper_num = upper_num;
     }
 
-    public double getRate() {
+    public Double getRate() {
         return rate;
     }
 
-    public void setRate(double rate) {
+    public void setRate(Double rate) {
         this.rate = rate;
     }
 
-    public int getBorrowbalance() {
-        return borrowbalance;
+    public int getBorrow_balance() {
+        return borrow_balance;
     }
 
-    public void setBorrowbalance(int borrowbalance) {
-        this.borrowbalance = borrowbalance;
+    public void setBorrow_balance(int borrow_balance) {
+        this.borrow_balance = borrow_balance;
     }
 
-    public int getSurplusbalance() {
-        return surplusbalance;
+    public int getSurplus_balance() {
+        return surplus_balance;
     }
 
-    public void setSurplusbalance(int surplusbalance) {
-        this.surplusbalance = surplusbalance;
+    public void setSurplus_balance(int surplus_balance) {
+        this.surplus_balance = surplus_balance;
     }
 
-    public int getUpperbalance() {
-        return upperbalance;
+    public int getUpper_balance() {
+        return upper_balance;
     }
 
-    public void setUpperbalance(int upperbalance) {
-        this.upperbalance = upperbalance;
+    public void setUpper_balance(int upper_balance) {
+        this.upper_balance = upper_balance;
     }
 
-    public int getJoinnum() {
-        return joinnum;
+    public int getJoin_num() {
+        return join_num;
     }
 
-    public void setJoinnum(int joinnum) {
-        this.joinnum = joinnum;
+    public void setJoin_num(int join_num) {
+        this.join_num = join_num;
     }
 
-    public Product(String productid, String servicedeadline, String reateid, boolean productstatus, int uppernum, double rate, int borrowbalance, int surplusbalance, int upperbalance, int joinnum) {
-        this.productid = productid;
-        this.servicedeadline = servicedeadline;
-        this.reateid = reateid;
-        this.productstatus = productstatus;
-        this.uppernum = uppernum;
+    public Product(String product_id, String service_deadline, String reate_id, boolean product_status, int upper_num, Double rate, int borrow_balance, int surplus_balance, int upper_balance, int join_num) {
+        this.product_id = product_id;
+        this.service_deadline = service_deadline;
+        this.reate_id = reate_id;
+        this.product_status = product_status;
+        this.upper_num = upper_num;
         this.rate = rate;
-        this.borrowbalance = borrowbalance;
-        this.surplusbalance = surplusbalance;
-        this.upperbalance = upperbalance;
-        this.joinnum = joinnum;
+        this.borrow_balance = borrow_balance;
+        this.surplus_balance = surplus_balance;
+        this.upper_balance = upper_balance;
+        this.join_num = join_num;
     }
 }
