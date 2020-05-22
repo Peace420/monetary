@@ -1,41 +1,69 @@
 package org.rrd.system.pojo;
 
-import lombok.Generated;
-import lombok.Getter;
-import lombok.Setter;
-
-import java.io.Serializable;
 import java.util.Date;
 
-/**
- * Description: Product_details
- * date: 2020/5/21 10:05
- * author: 朱忠涛
- * version: 1.0
- */
-@Getter
-@Setter
-@Generated
-public class Product_details implements Serializable{
-
-    /*id*/
+public class Product_details {
     private int id;
-
-    /*产品ID*/
-    private String productId;
-
-    /*xxx期*/
     private String phase;
+    private String product_id;
+    private int detaoils_status;
+    private Date now_date;
+    private Date start_date;
+    private Date end_date;
 
-    /*当前期*/
-    private Date nowDate;
+    public int getId() {
+        return id;
+    }
 
-    /*开始计息日期*/
-    private Date startDate;
+    public void setId(int id) {
+        this.id = id;
+    }
 
-    /*结束计息日期*/
-    private Date endDate;
+    public String getPhase() {
+        return phase;
+    }
 
-    /*状态*/
-    private boolean detailsStatus;
+    public void setPhase(String phase) {
+        this.phase = phase;
+    }
+
+    public String getProduct_id() {
+        return product_id;
+    }
+
+    public void setProduct_id(String product_id) {
+        this.product_id = product_id;
+    }
+
+    public int getDetaoils_status() {
+        return detaoils_status;
+    }
+
+    public void setDetaoils_status(int detaoils_status) {
+        this.detaoils_status = detaoils_status;
+    }
+
+    public Date getNow_date() {
+        return now_date;
+    }
+
+    public void setNow_date(Date now_date) {
+        this.now_date = now_date;
+    }
+
+    public Date getStart_date() {
+        return start_date;
+    }
+
+    public void setStart_date(Date start_date) {
+        this.start_date = start_date;
+    }
+
+    public Date getEnd_date() {
+        return end_date;
+    }
+
+    public void setEnd_date(Date end_date) {
+        this.end_date = end_date;
+    }
 }

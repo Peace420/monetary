@@ -1,6 +1,6 @@
 server:
   port: 10002
-
+# 123
 spring:
   application:
     name: monetary_product_service
