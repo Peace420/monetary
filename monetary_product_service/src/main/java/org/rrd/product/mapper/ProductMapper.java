@@ -6,7 +6,7 @@ import org.rrd.system.pojo.Product;
 import java.util.List;
 
 /**
- * Description: ProductMapper
+ * Description: ProductMapper 1
  * date: 2020/5/19 14:33
  * author:
  * version: 1.0
