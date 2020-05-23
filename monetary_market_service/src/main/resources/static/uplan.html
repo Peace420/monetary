@@ -14,10 +14,10 @@
         <tr >
         <div>
             <td v-for="i in plist">
-                {{i.service_deadline}}个月服务期限
+                {{i.serviceDeadline}}个月服务期限
                 &nbsp;&nbsp;&nbsp;&nbsp;<br>
                 &nbsp;
-                {{i.rate}}%利率<br><br>
+                {{i.rete}}%利率<br><br>
                 扣税后年利率<br>
                 <button>查看详情</button>
             </td>
@@ -65,7 +65,7 @@
         methods:{
             getAllMsg: function () {
                 var that = this ;
-                axios.get("http://127.0.0.1:10002/product/allProduct").then(
+                axios.get("http://127.0.0.1:10001/market/allProduct").then(
                     function (res) {
                         console.log(res)
                         that.plist = res.data.data;
@@ -77,7 +77,8 @@
                 if (that.number<1000 || that.number%1000!=0){
                     that.msg="投资金额须为1000的整数倍且不能为空";
                 }else {
-                    axios.post("http://127.0.0.1:10002/product/calculator?number="+that.number).then(
+                    that.msg="";
+                    axios.post("http://127.0.0.1:10001/market/calculator?number="+that.number).then(
                         function (res) {
                             that.map=res.data.data
                         }

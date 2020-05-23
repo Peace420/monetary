@@ -20,8 +20,11 @@ eureka:
 mybatis:
   type-aliases-package: org.rrd.system.pojo org.rrd.system.vo
   mapper-locations: classpath:mapper/*.xml
+  config-location: classpath:config/mybatis.cfg.xml
+
 logging:
   level:
     org:
       rrd:
-        mapper: debug
+        market:
+          mapper: debug

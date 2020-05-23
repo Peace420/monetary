@@ -1,43 +1,95 @@
 package org.rrd.system.pojo;
 
-
-import lombok.Generated;
-import lombok.Getter;
-import lombok.Setter;
-
 import java.io.Serializable;
 
 /**
- * Description: User
- * date: 2020/5/21 9:41
- * author: 朱忠涛
- * version: 1.0
+ * Created by luyubo on 2020/5/21.
  */
-@Getter
-@Setter
-@Generated
-public class User implements Serializable{
-
-    /*id=手机号*/
+public class User implements Serializable {
     private String id;
-
-    /*password*/
     private String password;
-
-    /*邮箱*/
     private String email;
-
-    /*地址*/
+    private double allMoney;
+    private double usableBalance;
+    private String idcardPhoto;
+    private String bankCard;
     private String address;
 
-    /*账户余额*/
-    private int usableBalance;
+    public String getId() {
+        return id;
+    }
 
-    /*p2p资产*/
-    private int allMoney;
+    public void setId(String id) {
+        this.id = id;
+    }
 
-    /*身份证*/
-    private String photo;
+    public String getPassword() {
+        return password;
+    }
 
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public double getAllMoney() {
+        return allMoney;
+    }
+
+    public void setAllMoney(double allMoney) {
+        this.allMoney = allMoney;
+    }
+
+    public double getUsableBalance() {
+        return usableBalance;
+    }
+
+    public void setUsableBalance(double usableBalance) {
+        this.usableBalance = usableBalance;
+    }
+
+    public String getIdcardPhoto() {
+        return idcardPhoto;
+    }
+
+    public void setIdcardPhoto(String idcardPhoto) {
+        this.idcardPhoto = idcardPhoto;
+    }
+
+    public String getBankCard() {
+        return bankCard;
+    }
+
+    public void setBankCard(String bankCard) {
+        this.bankCard = bankCard;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public User(String id, String password, String email, double allMoney, double usableBalance, String idcardPhoto, String bankCard, String address) {
+        this.id = id;
+        this.password = password;
+        this.email = email;
+        this.allMoney = allMoney;
+        this.usableBalance = usableBalance;
+        this.idcardPhoto = idcardPhoto;
+        this.bankCard = bankCard;
+        this.address = address;
+    }
+
+    public User() {
+    }
 }

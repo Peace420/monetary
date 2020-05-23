@@ -1,15 +1,19 @@
 package org.rrd.system.pojo;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Product_details {
+/**
+ * Created by luyubo on 2020/5/21.
+ */
+public class Product_details implements Serializable {
     private int id;
     private String phase;
-    private String product_id;
-    private int detaoils_status;
-    private Date now_date;
-    private Date start_date;
-    private Date end_date;
+    private String productId;
+    private int detaoilsStatus;
+    private Date nowDate;
+    private Date startDate;
+    private Date endDate;
 
     public int getId() {
         return id;
@@ -27,43 +31,56 @@ public class Product_details {
         this.phase = phase;
     }
 
-    public String getProduct_id() {
-        return product_id;
+    public String getProductId() {
+        return productId;
     }
 
-    public void setProduct_id(String product_id) {
-        this.product_id = product_id;
+    public void setProductId(String productId) {
+        this.productId = productId;
     }
 
-    public int getDetaoils_status() {
-        return detaoils_status;
+    public int getDetaoilsStatus() {
+        return detaoilsStatus;
     }
 
-    public void setDetaoils_status(int detaoils_status) {
-        this.detaoils_status = detaoils_status;
+    public void setDetaoilsStatus(int detaoilsStatus) {
+        this.detaoilsStatus = detaoilsStatus;
     }
 
-    public Date getNow_date() {
-        return now_date;
+    public Date getNowDate() {
+        return nowDate;
     }
 
-    public void setNow_date(Date now_date) {
-        this.now_date = now_date;
+    public void setNowDate(Date nowDate) {
+        this.nowDate = nowDate;
     }
 
-    public Date getStart_date() {
-        return start_date;
+    public Date getStartDate() {
+        return startDate;
     }
 
-    public void setStart_date(Date start_date) {
-        this.start_date = start_date;
+    public void setStartDate(Date startDate) {
+        this.startDate = startDate;
     }
 
-    public Date getEnd_date() {
-        return end_date;
+    public Date getEndDate() {
+        return endDate;
     }
 
-    public void setEnd_date(Date end_date) {
-        this.end_date = end_date;
+    public void setEndDate(Date endDate) {
+        this.endDate = endDate;
+    }
+
+    public Product_details(int id, String phase, String productId, int detaoilsStatus, Date nowDate, Date startDate, Date endDate) {
+        this.id = id;
+        this.phase = phase;
+        this.productId = productId;
+        this.detaoilsStatus = detaoilsStatus;
+        this.nowDate = nowDate;
+        this.startDate = startDate;
+        this.endDate = endDate;
+    }
+
+    public Product_details() {
     }
 }

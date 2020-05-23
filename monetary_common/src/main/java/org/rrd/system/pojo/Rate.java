@@ -1,31 +1,46 @@
 package org.rrd.system.pojo;
 
-
-import lombok.Generated;
-import lombok.Getter;
-import lombok.Setter;
-
 import java.io.Serializable;
 import java.util.Date;
 
 /**
- * Description: Rate
- * date: 2020/5/21 10:19
- * author: 朱忠涛
- * version: 1.0
+ * Created by luyubo on 2020/5/21.
  */
-@Getter
-@Setter
-@Generated
-public class Rate implements Serializable{
-
-    /*id*/
-    private int id;
-
-    /*利率时间*/
+public class Rate implements Serializable {
+    private String id;
     private Date rateDate;
-
-    /*利率*/
     private double percentage;
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public Date getRateDate() {
+        return rateDate;
+    }
+
+    public void setRateDate(Date rateDate) {
+        this.rateDate = rateDate;
+    }
+
+    public double getPercentage() {
+        return percentage;
+    }
+
+    public void setPercentage(double percentage) {
+        this.percentage = percentage;
+    }
+
+    public Rate(String id, Date rateDate, double percentage) {
+        this.id = id;
+        this.rateDate = rateDate;
+        this.percentage = percentage;
+    }
+
+    public Rate() {
+    }
 }
