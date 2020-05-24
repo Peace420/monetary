@@ -4,6 +4,14 @@
     <facet type="Spring" name="Spring">
       <configuration />
     </facet>
+<<<<<<< HEAD
+=======
+    <facet type="web" name="Web">
+      <configuration>
+        <webroots />
+      </configuration>
+    </facet>
+>>>>>>> 95524300c850d0489ab95f470a767bcd966b17d2
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
     <output url="file://$MODULE_DIR$/target/classes" />

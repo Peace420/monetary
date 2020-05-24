@@ -1,12 +1,20 @@
 server:
   port: 10002
+<<<<<<< HEAD
 
+=======
+# 123
+>>>>>>> 95524300c850d0489ab95f470a767bcd966b17d2
 spring:
   application:
     name: monetary_product_service
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
+<<<<<<< HEAD
     url: jdbc:mysql://localhost:3306/renrendai?characterEncoding=UTF8&useSSL=true
+=======
+    url: jdbc:mysql://39.97.107.144/renrendai?characterEncoding=UTF8&useSSL=true
+>>>>>>> 95524300c850d0489ab95f470a767bcd966b17d2
     username: root
     password: 123456
 
@@ -20,10 +28,18 @@ eureka:
 mybatis:
   type-aliases-package: org.rrd.system.pojo org.rrd.system.vo
   mapper-locations: classpath:mapper/*.xml
+<<<<<<< HEAD
   configuration:
       mapmap-underscore-to-camel-case: true
+=======
+>>>>>>> 95524300c850d0489ab95f470a767bcd966b17d2
 logging:
   level:
     org:
       rrd:
+<<<<<<< HEAD
         mapper: debug
+=======
+        product:
+          mapper: debug
+>>>>>>> 95524300c850d0489ab95f470a767bcd966b17d2

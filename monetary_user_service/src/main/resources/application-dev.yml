@@ -6,7 +6,11 @@ spring:
     name: monetary_user_service
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
+<<<<<<< HEAD
     url: jdbc:mysql://localhost:3306/renrendai?characterEncoding=UTF8&useSSL=true
+=======
+    url: jdbc:mysql://39.97.107.144/renrendai?characterEncoding=UTF8&useSSL=true
+>>>>>>> 95524300c850d0489ab95f470a767bcd966b17d2
     username: root
     password: 123456
 

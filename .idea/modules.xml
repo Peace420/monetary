@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/monetary.iml" filepath="$PROJECT_DIR$/monetary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/monetary_common/monetary_common.iml" filepath="$PROJECT_DIR$/monetary_common/monetary_common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/monetary_eureka_register/monetary_eureka_register.iml" filepath="$PROJECT_DIR$/monetary_eureka_register/monetary_eureka_register.iml" />
+      <module fileurl="file://$PROJECT_DIR$/monetary_market_service/monetary_market_service.iml" filepath="$PROJECT_DIR$/monetary_market_service/monetary_market_service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/monetary_product_service/monetary_product_service.iml" filepath="$PROJECT_DIR$/monetary_product_service/monetary_product_service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/monetary_user_service/monetary_user_service.iml" filepath="$PROJECT_DIR$/monetary_user_service/monetary_user_service.iml" />
+    </modules>
+  </component>
+</project>

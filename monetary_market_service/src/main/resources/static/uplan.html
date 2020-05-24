@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="webjars/vue/2.5.17/dist/vue.js"></script>
+    <script type="text/javascript" src="webjars/axios/0.18.0/dist/axios.js"></script>
+    <script type="text/javascript">
+    </script>
+</head>
+<body>
+<div id="app">
+    <table >
+        <tr >
+        <div>
+            <td v-for="i in plist">
+                {{i.serviceDeadline}}个月服务期限
+                &nbsp;&nbsp;&nbsp;&nbsp;<br>
+                &nbsp;
+                {{i.rete}}%利率<br><br>
+                扣税后年利率<br>
+                <button>查看详情</button>
+            </td>
+        </div>
+        </tr>
+    </table>
+    扣费后利息<br>
+    <table>
+        <tr>
+            <td width="200">
+                <input v-model="number">元<br>
+                <button @click="calculator()">开始计算</button>
+                <span v-text="msg" style="color: red"></span>
+            </td>
+            <td width="200">
+                1个月
+                {{map[1]}}
+                <br>
+                3个月
+                {{map[3]}}
+                <br>
+                6个月
+                {{map[6]}}
+            </td>
+            <td>
+                12个月
+                {{map[12]}}<br>
+                24个月
+                {{map[24]}}<br>
+                36个月
+                {{map[36]}}
+            </td>
+        </tr>
+    </table>
+</div>
+<script>
+    var app = new Vue({
+        el:"#app",
+        data:{
+            plist:{},
+            number:10000,
+            map:[],
+            msg:""
+        },
+        methods:{
+            getAllMsg: function () {
+                var that = this ;
+                axios.get("http://127.0.0.1:10001/market/allProduct").then(
+                    function (res) {
+                        console.log(res)
+                        that.plist = res.data.data;
+                    }
+                )
+            },
+            calculator:function () {
+                var that = this;
+                if (that.number<1000 || that.number%1000!=0){
+                    that.msg="投资金额须为1000的整数倍且不能为空";
+                }else {
+                    that.msg="";
+                    axios.post("http://127.0.0.1:10001/market/calculator?number="+that.number).then(
+                        function (res) {
+                            that.map=res.data.data
+                        }
+                    )
+                }
+            }
+        },
+        created:function () {
+            this.getAllMsg();
+            this.calculator();
+        }
+    })
+</script>
+</body>
+</html>

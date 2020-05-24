@@ -4,6 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="org.rrd.product.mapper.ProductMapper">
+<<<<<<< HEAD
     <resultMap id="PRMap" type="ProductAndRate">
         <result property="productId" column="product_id"></result>
         <result property="serviceDeadline" column="service_deadline"></result>
@@ -28,5 +29,15 @@
 
     <select id="getNow" resultType="string">
         SELECT DATE_FORMAT(NOW(),'%Y%m%d%H%i%s')
+=======
+    <select id="uplan" resultType="product">
+        SELECT
+        service_deadline,rate
+        FROM t_product
+    </select>
+    <select id="allProduct" resultType="product">
+        SELECT *
+        FROM t_product
+>>>>>>> 95524300c850d0489ab95f470a767bcd966b17d2
     </select>
 </mapper>

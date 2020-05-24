@@ -10,6 +10,18 @@ import org.rrd.system.pojo.User;
  * author:
  * version: 1.0
  */
+<<<<<<< HEAD
 public interface UserMapper {
     User findByIdAndPassword(@Param("id") String id, @Param("password") String password);
+=======
+@Mapper
+public interface UserMapper {
+
+
+    //注册
+    public int zhuce(User user);
+
+    //登录
+    public User login(User user);
+>>>>>>> 95524300c850d0489ab95f470a767bcd966b17d2
 }
