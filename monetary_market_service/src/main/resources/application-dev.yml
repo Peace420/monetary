@@ -1,0 +1,27 @@
+server:
+  port: 10001
+
+spring:
+  application:
+    name: monetary_market_service
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://39.97.107.144/renrendai?characterEncoding=UTF8&useSSL=true
+    username: root
+    password: 123456
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10000/eureka/
+  instance:
+    prefer-ip-address: true
+
+mybatis:
+  type-aliases-package: org.rrd.system.pojo org.rrd.system.vo
+  mapper-locations: classpath:mapper/*.xml
+logging:
+  level:
+    org:
+      rrd:
+        mapper: debug

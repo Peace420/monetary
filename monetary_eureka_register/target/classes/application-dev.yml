@@ -1,0 +1,15 @@
+#开发端口
+server:
+  port: 10000
+#eureka注册中心
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10000/eureka/
+    fetch-registry: false
+  instance:
+    prefer-ip-address: false
+#服务应用名称
+spring:
+  application:
+    name: monetary_eureka_register

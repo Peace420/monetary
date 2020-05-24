@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.rrd.product.mapper.ProductMapper">
+    <resultMap id="PRMap" type="ProductAndRate">
+        <result property="productId" column="product_id"></result>
+        <result property="serviceDeadline" column="service_deadline"></result>
+        <result property="rateId" column="rate_id"></result>
+        <result property="productStatus" column="product_status"></result>
+        <result property="upperNum" column="upper_num"></result>
+        <result property="borrowBalance" column="borrow_balance"></result>
+        <result property="surplusBalance" column="surplus_balance"></result>
+        <result property="upperBalance" column="upper_balance"></result>
+        <result property="joinNum" column="join_num"></result>
+        <result property="rateDate" column="rate_date"></result>
+    </resultMap>
+
+
+    <select id="getList" resultMap="PRMap">
+        select * from t_product p,t_rate r where p.rate_id=r.id
+    </select>
+
+    <select id="findOneById" parameterType="string" resultMap="PRMap">
+        select * from t_product p,t_rate r where p.rate_id=r.id AND p.product_id=#{id}
+    </select>
+
+    <select id="getNow" resultType="string">
+        SELECT DATE_FORMAT(NOW(),'%Y%m%d%H%i%s')
+    </select>
+</mapper>
