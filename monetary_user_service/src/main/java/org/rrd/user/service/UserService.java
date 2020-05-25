@@ -5,19 +5,7 @@ import org.rrd.user.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-<<<<<<< HEAD
-/**
- * Created by luyubo on 2020/5/21.
- */
-@Service
-public class UserService {
-    @Autowired
-    private UserMapper userMapper;
 
-    public User findByIdAndPassword(String id, String password) {
-        return userMapper.findByIdAndPassword(id,password);
-    }
-=======
 @Service
 public class UserService {
 
@@ -37,5 +25,4 @@ public class UserService {
         return userMapper.login(user);
     }
 
->>>>>>> 95524300c850d0489ab95f470a767bcd966b17d2
 }
