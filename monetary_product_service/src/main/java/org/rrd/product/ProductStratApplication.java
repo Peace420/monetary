@@ -17,11 +17,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @EnableEurekaClient
 @EnableFeignClients
 @EnableDiscoveryClient
-<<<<<<< HEAD
-@MapperScan("org.rrd.product.mapper")
-=======
 @MapperScan("org.rrd.market.mapper")
->>>>>>> 95524300c850d0489ab95f470a767bcd966b17d2
 public class ProductStratApplication {
 
     public static void main(String[] args) {
