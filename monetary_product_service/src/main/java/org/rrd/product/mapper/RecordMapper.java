@@ -1,7 +1,10 @@
 package org.rrd.product.mapper;
 
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Mapper;
 import org.rrd.system.pojo.Record;
 
-public interface RecordMapper extends BaseMapper<Record> {
+@Mapper
+public interface RecordMapper  {
+
+    void insert(Record record);
 }

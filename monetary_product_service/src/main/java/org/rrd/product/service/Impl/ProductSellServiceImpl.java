@@ -21,7 +21,6 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Transactional
 @Service
-@Slf4j
 public class ProductSellServiceImpl implements ProductSellService {
 
     @Autowired
@@ -37,13 +36,13 @@ public class ProductSellServiceImpl implements ProductSellService {
     private static final int numberMinprice=1000;
 
     @Value("Numberone.one")
-    private int numberone;
+    private String numberone;
 
     @Value("Numberone.two")
-    private int numbertwo;
+    private String numbertwo;
 
     @Value("Numberone.three")
-    private int numberthree;
+    private String numberthree;
     Record record=null;
 
     /**
@@ -65,7 +64,7 @@ public class ProductSellServiceImpl implements ProductSellService {
                 record.setProductDetailsId(user.getProductDetailsId());
                 record.setBorrowBalance(user.getNumberOut());
                 record.setBorrowDate(DataClass.time());
-                record.setRecordStatus(numberone);
+                record.setRecordStatus(Integer.valueOf(numberone));
                 //加入出借记录表
                 recordService.insertRecord(record);
                 //远程调用利息计算接口  传入用户出借金额

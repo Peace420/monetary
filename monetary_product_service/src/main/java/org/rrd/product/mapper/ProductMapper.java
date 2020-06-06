@@ -1,5 +1,7 @@
 package org.rrd.product.mapper;
 
+import org.apache.ibatis.annotations.Mapper;
+
 import java.util.List;
 
 /**
@@ -8,6 +10,7 @@ import java.util.List;
  * author:
  * version: 1.0
  */
+@Mapper
 public interface ProductMapper {
     List getList();
 

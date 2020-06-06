@@ -1,6 +1,6 @@
 package org.rrd.product.service.Impl;
 
-import com.baomidou.mybatisplus.extension.api.R;
+
 import org.rrd.product.mapper.RecordMapper;
 import org.rrd.product.service.RecordService;
 import org.rrd.system.pojo.Record;
