@@ -14,6 +14,6 @@ import java.util.Map;
 /**
  * @author hujie
  */
-public interface ProductSellService {
+public interface ProductSellService{
     void sell(User user);
 }
